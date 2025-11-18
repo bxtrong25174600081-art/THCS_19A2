@@ -1,10 +1,24 @@
-tien_gui = float(input("Nhập số tiền gửi ban đầu: "))
-lai_suat = float(input("Nhập lãi suất năm (%): ")) / 100
+# S1
+n = int(input("Nhập n: "))
+S1 = 0
+for i in range(1, n+1):
+    S1 += i
+print("S1 =", S1)
 
-lai_1_thang = tien_gui * (lai_suat / 12)
-lai_2_quy = tien_gui * (lai_suat / 2)
-lai_3_nam = tien_gui * lai_suat * 3
+# S2
+S2 = 1
+for i in range(1, n):
+    S2 *= i
+print("S2 =", S2)
 
-print("Lãi sau 1 tháng:", round(lai_1_thang, 2))
-print("Lãi sau 2 quý:", round(lai_2_quy, 2))
-print("Lãi sau 3 năm:", round(lai_3_nam, 2))
+# S3
+S3 = 0
+for i in range(1, n+1):
+    S3 += ((-1)**(i+1)) * (1/i)
+print("S3 =", S3)
+
+# S4
+S4 = 0 
+for k in range(0, n+1):
+    S4 += k / (k + 2)
+print("S4 =", S4)
