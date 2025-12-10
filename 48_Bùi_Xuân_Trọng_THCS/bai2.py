@@ -1,8 +1,0 @@
-a = int(input("Nhập số thứ nhất: "))
-b = int(input("Nhập số thứ hai: "))
-
-# Thuật toán Euclid
-while b != 0:
-    a, b = b, a % b
-
-print("Ước chung lớn nhất là:", a)
