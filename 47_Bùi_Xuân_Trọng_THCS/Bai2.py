@@ -1,11 +1,20 @@
-def giai_phuong_trinh_bac_nhat(a,b):
-    if a == 0 and b != 0:
-        return "Vô nghiệm"
-    elif a == 0 and b == 0:
-        return "Vô số nghiệm"
+s = input("Nhập chuỗi: ")
+n = int(input("Nhập độ dài n: "))
+
+tu_hien_tai = ""
+for ky_tu in s:
+    if ky_tu != " ":
+        tu_hien_tai += ky_tu
     else:
-        x = -b/a
-        return x
-a = 0
-b = 0
-print( giai_phuong_trinh_bac_nhat(a,b))
+        do_dai = 0
+        for _ in tu_hien_tai: 
+            do_dai += 1
+        if do_dai > n:
+            print(tu_hien_tai)
+        tu_hien_tai = ""
+do_dai_cuoi = 0
+for _ in tu_hien_tai: 
+    do_dai_cuoi += 1
+
+if do_dai_cuoi > n:
+    print(tu_hien_tai)

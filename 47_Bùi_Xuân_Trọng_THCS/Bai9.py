@@ -1,10 +1,9 @@
-def tinh_tong_chu_so(n):
-    if n < 10:
-        return n
-    else:
-        chu_so_cuoi = n % 10
-        phan_con_lai = n // 10
-        return chu_so_cuoi + tinh_tong_chu_so(phan_con_lai)
-n = 12345
-ket_qua = tinh_tong_chu_so(n)
-print(f"Tổng các chữ số của {n} là: {ket_qua}")
+n = int(input("Kích thước ma trận vuông n: "))
+mt = []
+for i in range(n):
+    hang = []
+    for j in range(n): hang += [int(input(f"Nhập mt[{i}][{j}]: "))]
+    mt += [hang]
+tong = 0
+for i in range(n): tong += mt[i][n - 1 - i]
+print("Tổng chéo phụ:", tong)

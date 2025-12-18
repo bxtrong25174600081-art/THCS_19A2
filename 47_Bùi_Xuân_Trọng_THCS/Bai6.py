@@ -1,25 +1,13 @@
-def la_so_nguyen_to(n):
-    if n <= 1:
-        return False
-    for i in range(2,n):
-      if  n % i == 0:
-        return False
-    return True
-n = 2
-print(la_so_nguyen_to(n))
-def in_so_nguyen_to_trong_khoang(a,b):
-    ket_qua_chuoi = ""
-    for i in range(a,b+1):
-        if la_so_nguyen_to(i):
-            ket_qua_chuoi += str(i) + ", "
-    return ket_qua_chuoi[:-2]
-a = 1
-b = 10
-print(in_so_nguyen_to_trong_khoang(a,b))
-
-
-
-
-
-
-
+n = int(input("Nhập số phần tử: "))
+a = [0] * n
+for i in range(n):
+    a[i] = int(input())
+tong_chan = 0
+tong_le = 0
+for i in range(n):
+    if a[i] % 2 == 0:
+        tong_chan = tong_chan + a[i]
+    else:
+        tong_le = tong_le + a[i]
+print("Tổng chẵn:", tong_chan)
+print("Tổng lẻ:", tong_le)
